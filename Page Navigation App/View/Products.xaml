@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Page_Navigation_App.View.Products"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:vm="clr-namespace:Page_Navigation_App.ViewModel"
+             mc:Ignorable="d"
+             d:DesignHeight="600"
+             d:DesignWidth="622"
+             Style="{StaticResource Page_Style}">
+
+    <UserControl.DataContext>
+        <vm:ProductVM />
+    </UserControl.DataContext>
+    <Grid Margin="15">
+        <Grid>
+            <TextBox x:Name="aicontent" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="572" Height="310" Text="Write here what you want to AI to make." Background="#FF252323" Foreground="White" FontSize="22" />
+            <Button x:Name="ask" Content="Ask AI" HorizontalAlignment="Left" Margin="10,325,0,0" VerticalAlignment="Top" Height="147" Width="281" FontSize="36" Background="#FF181717" Foreground="#FFFFFEFE"/>
+            <Button x:Name="copy" Content="Copy Code" HorizontalAlignment="Left" Margin="296,325,0,0" VerticalAlignment="Top" Height="147" Width="286" FontSize="36" Background="#FF181717" Foreground="#FFFFFEFE" Click="CopyButton_Click"/>
+        </Grid>
+
+    </Grid>
+</UserControl>
